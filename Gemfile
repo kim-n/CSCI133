@@ -7,6 +7,8 @@ gem 'rails', '3.2.14'
 
 gem 'pg'
 
+gem 'google_drive'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +21,13 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+gem 'figaro'
 
 gem 'jquery-rails'
 
