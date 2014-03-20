@@ -11,3 +11,75 @@
  *= require_self
  *= require_tree .
  */
+
+/* ----- RESET ----- */
+
+html, body, header, footer, section, article, div, span,
+strong, a, img, p, h1, h2, h3, time, ul, li, small, input, select, form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+table {
+/*  border-collapse:separate;*/
+  border-spacing:0px;
+}
+/* ----- ELEMENTS ----- */
+
+body {
+  font-family: sans-serif;
+/*  background: transparent;*/
+  font-size: 16px;
+  line-height: normal;
+/*  background: #F8F8F4;*/
+}
+
+
+.main {
+  background: #CCC;
+  width: 760px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+form{
+/*  border: 1px solid black;*/
+  margin: 20px 0px;
+}
+
+table{
+  background: white;
+  margin: 10px 0px;
+}
+
+tr.head td {
+  border: 1px solid black;
+}
+
+td {
+  width: 40px;
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  left: -1px;
+}
+
+td.timeoff {
+  color: red;
+}
+
+p.error {
+  background: red;
+}

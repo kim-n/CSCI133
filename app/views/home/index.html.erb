@@ -1,4 +1,6 @@
-<h1>CSCI 133</h1>
+<h1>CSCI 133: Programming for Everyone</h1>
+
+<a href="https://bbhosted.cuny.edu/webapps/portal/frameset.jsp?tab_tab_group_id=_50_1&url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_947900_1%26url%3D">Blackboard</a>
 
 <form action="<%= home_index_url %>" method="GET">
 <input  
@@ -19,18 +21,19 @@
 </form>
 
 
-<% if @current %>
-<p>Current Unit: <%= @current %></p>
-<p><%= @timeoff %> out of 5 Time-off points</p>
+<% if @current_unit %>
+<p><%= @name %></p>
+<p>Current Unit: <%= @current_unit %></p>
+<p>Time-off Pts: <%= @timeoff %> out of 5</p>
 
 
   <table>
-    <tr>
+    <tr class="head">
       <td>Date</td>
-      <td>O</td>
-      <td>H</td>
-      <td>T</td>
-      <td>U</td>
+      <td>Time/Off</td>
+      <td>Hours</td>
+      <td>Test</td>
+      <td>Unit</td>
     </tr>
     
   <tr>
@@ -46,7 +49,12 @@
   <% end %>
   </tr>
   
+  </table>
+  
+  <p>A: Absent</p>
+  <p>L: Late</p>
+  <p>H: Half</p>
+  
 <% elsif @message %>  
   <p class="error"><%= @message %></p>
 <% end %>
-</table>
