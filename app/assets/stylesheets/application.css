@@ -83,3 +83,12 @@ td.timeoff {
 p.error {
   background: red;
 }
+
+div.empty {
+  width: 760px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 100px;
+}

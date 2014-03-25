@@ -1,5 +1,6 @@
 Csci133::Application.routes.draw do
   root :to => 'home#index'
+  get 'new', to: 'home#new'
   resources :home
 
   # The priority is based upon order of creation:
