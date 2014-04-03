@@ -1,33 +1,13 @@
 <div class="main">
 
-<h1>CSCI 133: Programming for Everyone</h1>
-
-<a href="https://bbhosted.cuny.edu/webapps/portal/frameset.jsp?tab_tab_group_id=_50_1&url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_947900_1%26url%3D">Blackboard</a>
-
-
-<form action="<%= home_index_url %>" method="GET">
-<input  
-  type="hidden"
-  name="authenticity_token"
-  value="<%= form_authenticity_token %>"
-></input>
-
-<label>First Name
-<input type="text" name="name[first]" value="<%=  %>"></input>
-</label>
-
-<label>Last Name
-<input type="text" name="name[last]" value="<%=  %>"></input>
-</label>
-
-<input type="submit" value="GO!"></input>
-</form>
+<h1><a href="https://bbhosted.cuny.edu/webapps/portal/frameset.jsp?tab_tab_group_id=_50_1&url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_947900_1%26url%3D">CSCI 133 | Programming for Everyone</a></h1>
 
 
 <% if @current_unit %>
-<p><%= @name %></p>
-<p>Current Unit: <%= @current_unit %></p>
-<p>Time-off Pts: <%= @timeoff %> out of 5</p>
+<div class="user-info">
+  <p class="name"><%= @name %></p>
+  <p>Current Unit: <%= @current_unit %></p>
+  <p>Time-off Pts: <%= @timeoff %> out of 5</p>
 
 
   <table>
@@ -38,7 +18,7 @@
       <td>Test</td>
       <td>Unit</td>
     </tr>
-    
+  
   <tr>
   <% @data.each_with_index do |item, index| %>
     <% if index % 5 == 0 && index != 0 %>
@@ -51,15 +31,39 @@
     <% end %>
   <% end %>
   </tr>
-  
+
   </table>
-  
-  <p>A: Absent</p>
-  <p>L: Late</p>
-  <p>H: Half</p>
+
+  <div class="note">
+    <p>A: Absent</p>
+    <p>L: Late</p>
+    <p>H: Half</p>
+  </div>
+</div>
   
 <% elsif @message %>  
   <p class="error"><%= @message %></p>
+  
+<% else %>
+
+  <form action="<%= home_index_url %>" method="GET">
+  <input  
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>"
+  ></input>
+
+  <label>First Name
+  <input type="text" name="name[first]" value="<%=  %>"></input>
+  </label>
+
+  <label>Last Name
+  <input type="text" name="name[last]" value="<%=  %>"></input>
+  </label>
+
+  <input type="submit" value="GO!"></input>
+  </form>
+
 <% end %>
 
 </div>

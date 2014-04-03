@@ -36,27 +36,79 @@ body {
 /*  background: transparent;*/
   font-size: 16px;
   line-height: normal;
+  background: #EEE;
 /*  background: #F8F8F4;*/
 }
 
 
+a:hover {
+  color: #AAA;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .main {
-  background: #CCC;
+  background: #FFF;
   width: 760px;
   padding: 20px;
   margin: auto;
   margin-top: 20px;
+  border: 2px solid #CCC;
+  border-radius:10px;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 200;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  color: #AAA;
 }
 
-form{
-/*  border: 1px solid black;*/
+form {
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  padding: 20px;
   margin: 20px 0px;
+}
+
+label {
+  width: 190px;
+  margin-right: 20px;
+  padding: 5px 0px;
+  padding-left: 5px;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+}
+
+input[type="text"] {
+  position: relative;
+  background: #EEE;
+  width: 190px;
+  padding: 5px;
+  border-radius: 2px;
+  left: 4px;
+}
+
+input[type="submit"] {
+  background: #EEE;
+  padding: 3px;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  width: 80px;
+  color: #AAA;
+}
+
+input[type="submit"]:hover {
+  background: #CCC;
+}
+
+div.user-info {
+  margin: 40px 20px 20px 20px;
 }
 
 table{
@@ -68,11 +120,15 @@ tr.head td {
   border: 1px solid black;
 }
 
+tr:hover{
+  background: #EEE;  
+}
+
 td {
   width: 40px;
   padding: 5px;
   text-align: center;
-  border-bottom: 1px solid black;
+/*  border-bottom: 1px solid black;*/
   left: -1px;
 }
 
@@ -82,6 +138,7 @@ td.timeoff {
 
 p.error {
   background: red;
+  text-align: center;
 }
 
 div.empty {
@@ -91,4 +148,14 @@ div.empty {
   margin-top: 200px;
   text-align: center;
   font-size: 100px;
+}
+
+
+p.name {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+div.note {
+  font-size:12px;
 }
