@@ -52,6 +52,132 @@ a {
 
 .main {
   background: #FFF;
+  width: 460px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+  border: 2px solid #CCC;
+  border-radius:10px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 200;
+  text-align: center;
+  padding: 20px;
+  color: black;
+}
+
+form {
+  width: 300px;
+  background: #EEE;
+  padding: 20px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+
+.user-info {
+  width: 300px;
+  background: #EEE;
+  padding: 20px;
+  margin: auto;
+}
+
+label {
+  display: block;
+/*  width: 190px;
+  margin-right: 20px;
+  padding: 5px 0px;
+  padding-left: 5px;
+  border: 1px solid #CCC;
+  border-radius: 2px;*/
+}
+
+input[type="text"] {
+  width: 275px;
+  padding: 10px;
+  border: 1px solid black;
+  border-bottom: 0px;
+/*  position: relative;
+  background: #EEE;
+  width: 190px;
+  padding: 5px;
+  border-radius: 2px;
+  left: 4px;*/
+}
+
+input[type="submit"] {
+  width: 297px;
+  border: 1px solid black;
+  padding: 10px 0px;
+  background: #CCC;
+/*  background: #EEE;
+  padding: 3px;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  width: 80px;
+  color: #AAA;*/
+}
+
+input[type="submit"]:hover {
+  background: #DDD;
+}
+
+
+
+div.user-info {
+  background: white;
+}
+
+div.user-info > p.name {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+div.user-info > div.summary {
+  margin-bottom: 20px;
+}
+
+table{
+  background: white;
+  margin: 10px 0px;
+}
+
+tr.head td {
+  border: 1px solid black;
+}
+
+tr:hover{
+  background: #EEE;  
+}
+
+td {
+  width: 40px;
+  padding: 5px;
+  text-align: center;
+  left: -1px;
+}
+
+td.timeoff {
+  color: red;
+}
+
+div.note {
+  font-size:12px;
+}
+
+p.error {
+  background: red;
+  text-align: center;
+}
+
+
+/*
+.main {
+  background: #FFF;
   width: 760px;
   padding: 20px;
   margin: auto;
@@ -128,7 +254,6 @@ td {
   width: 40px;
   padding: 5px;
   text-align: center;
-/*  border-bottom: 1px solid black;*/
   left: -1px;
 }
 
@@ -156,6 +281,9 @@ p.name {
   font-weight: 500;
   padding-bottom: 10px;
 }
+
 div.note {
   font-size:12px;
 }
+
+*/

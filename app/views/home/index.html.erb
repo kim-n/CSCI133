@@ -6,9 +6,10 @@
 <% if @current_unit %>
 <div class="user-info">
   <p class="name"><%= @name %></p>
-  <p>Current Unit: <%= @current_unit %></p>
-  <p>Time-off Pts: <%= @timeoff %> out of 5</p>
-
+  <div class="summary">
+    <p>CURRENT UNIT: <%= @current_unit %></p>
+    <p>TIME-OFF PNTS: <%= @timeoff %> out of 5</p>
+  </div>
 
   <table>
     <tr class="head">
@@ -53,12 +54,12 @@
     value="<%= form_authenticity_token %>"
   ></input>
 
-  <label>First Name
-  <input type="text" name="name[first]" value="<%=  %>"></input>
+  <label>
+  <input type="text" name="name[first]" placeholder="First name" value="<%=  %>"></input>
   </label>
 
-  <label>Last Name
-  <input type="text" name="name[last]" value="<%=  %>"></input>
+  <label>
+  <input type="text" name="name[last]" placeholder="Last name" value="<%=  %>"></input>
   </label>
 
   <input type="submit" value="GO!"></input>
