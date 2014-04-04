@@ -78,6 +78,7 @@ form {
 
 
 .user-info {
+  font-family: "Economica";
   width: 300px;
   background: #EEE;
   padding: 20px;
@@ -144,6 +145,7 @@ div.user-info > div.summary {
 table{
   background: white;
   margin: 10px 0px;
+  font-family: "Economica";
 }
 
 tr.head td {
