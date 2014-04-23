@@ -1,43 +1,46 @@
 <div class="main">
 
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
+<div class="squares">
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
 
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
 
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
 
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
 
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
-<div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+</div>
+
 <h1><a href="https://bbhosted.cuny.edu/webapps/portal/frameset.jsp?tab_tab_group_id=_50_1&url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_947900_1%26url%3D">CSCI 133 | Programming for Everyone</a></h1>
 
 
+
 <% if @current_unit %>
+<p class="name"><%= @name %></p>
+
 <div class="user-info">
-  <p class="name"><%= @name %></p>
   <div class="summary">
     <p>CURRENT UNIT: <%= @current_unit %></p>
     <p>TIME-OFF PNTS: <%= @timeoff %> out of 5</p>
+    
   </div>
 
   <table>
@@ -95,6 +98,7 @@
   </form>
 
 <% end %>
+  <p class="updated">LAST UPDATED: <%= @updated %></p>
 
 </div>
 
@@ -103,17 +107,31 @@
    
    var things = [];
    things =  <%= raw @dates.to_json %>;
+   console.log(things);
    var num = 1;
    things.forEach(function(entry) {
-     $('.square:nth-child(' + num + ')').css('background-color', 'red');
-     $('.square:nth-child(' + num + ')').text(entry);
+     if (entry[1] == ''){
+       $('.square:nth-child(' + num + ')').css('background-color', 'green');
+     }
+     else if(entry[1] == 'A'){
+       $('.square:nth-child(' + num + ')').css('background-color', 'red'); 
+     }
+     else {
+       $('.square:nth-child(' + num + ')').css('background-color', 'orange');
+     }
+     $('.square:nth-child(' + num + ')').text(entry[0]);
      num++;
    })
    
    $('.square').css('color', 'transparent');
    $(".square").hover(function(){
-     $(this).css('color', 'blue');
+     
+     if($(this).text() != '') {
+       $(this).css('width', '63px');
+     }
+     $(this).css('color', 'white');
      },function(){
+       $(this).css('width', '10px');
      $(this).css('color', 'transparent');
    }); 
  })

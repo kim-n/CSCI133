@@ -21,6 +21,7 @@ class HomeController < ApplicationController
     @current_unit = nil
     @name = nil
     
+    @updated = @ws.updated
     if params["name"]
       @name = params["name"]["first"].capitalize + " " + params["name"]["last"].capitalize 
       @message = @name + " not found."
@@ -31,7 +32,7 @@ class HomeController < ApplicationController
           for col in 3..@ws.num_cols
             
             @data << fill_date(@ws[1,col]) if (col-3)% 4 == 0 
-            @dates << fill_date(@ws[1,col]) if (col-3)% 4 == 0
+            @dates.unshift([fill_date(@ws[1,col]), @ws[row,col]])  if (col-3)% 4 == 0
              
             @data << @ws[row,col]
             @timeoff = @timeoff -1 if @ws[row,col] == "A"
