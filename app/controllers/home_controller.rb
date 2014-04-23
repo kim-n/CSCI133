@@ -15,6 +15,7 @@ class HomeController < ApplicationController
    
     
     @data = []
+    @dates = []
     
     @timeoff = 5
     @current_unit = nil
@@ -28,7 +29,10 @@ class HomeController < ApplicationController
           @message = nil
           @current_unit = @ws[row, 6].to_i + 1
           for col in 3..@ws.num_cols
+            
             @data << fill_date(@ws[1,col]) if (col-3)% 4 == 0 
+            @dates << fill_date(@ws[1,col]) if (col-3)% 4 == 0
+             
             @data << @ws[row,col]
             @timeoff = @timeoff -1 if @ws[row,col] == "A"
             @timeoff = @timeoff -0.5 if @ws[row,col] == "L" || @ws[row,col] == "H"

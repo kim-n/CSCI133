@@ -1,5 +1,34 @@
 <div class="main">
 
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
 <h1><a href="https://bbhosted.cuny.edu/webapps/portal/frameset.jsp?tab_tab_group_id=_50_1&url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_947900_1%26url%3D">CSCI 133 | Programming for Everyone</a></h1>
 
 
@@ -68,3 +97,24 @@
 <% end %>
 
 </div>
+
+ <script>
+ $(function() {
+   
+   var things = [];
+   things =  <%= raw @dates.to_json %>;
+   var num = 1;
+   things.forEach(function(entry) {
+     $('.square:nth-child(' + num + ')').css('background-color', 'red');
+     $('.square:nth-child(' + num + ')').text(entry);
+     num++;
+   })
+   
+   $('.square').css('color', 'transparent');
+   $(".square").hover(function(){
+     $(this).css('color', 'blue');
+     },function(){
+     $(this).css('color', 'transparent');
+   }); 
+ })
+</script> 

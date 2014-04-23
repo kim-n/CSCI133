@@ -177,6 +177,20 @@ p.error {
   color: white;
 }
 
+div.square {
+  height: 13px;
+  width: 10px;
+  background: green;
+  display: inline-block;
+  opacity:0.3
+  color: transparent;
+}
+
+div.square:hover {
+  width: 70px;
+  color: blue;
+}
+
 
 /*
 .main {
