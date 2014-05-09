@@ -26,18 +26,18 @@ strong, a, img, p, h1, h2, h3, time, ul, li, small, input, select, form {
 
 
 table {
-/*  border-collapse:separate;*/
   border-spacing:0px;
 }
+
+
 /* ----- ELEMENTS ----- */
+
 
 body {
   font-family: sans-serif;
-/*  background: transparent;*/
   font-size: 16px;
   line-height: normal;
   background: #EEE;
-/*  background: #F8F8F4;*/
 }
 
 
@@ -49,6 +49,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 
 .main {
   background: #FFF;
@@ -93,12 +94,6 @@ form {
 
 label {
   display: block;
-/*  width: 190px;
-  margin-right: 20px;
-  padding: 5px 0px;
-  padding-left: 5px;
-  border: 1px solid #CCC;
-  border-radius: 2px;*/
 }
 
 input[type="text"] {
@@ -106,12 +101,6 @@ input[type="text"] {
   padding: 10px;
   border: 1px solid black;
   border-bottom: 0px;
-/*  position: relative;
-  background: #EEE;
-  width: 190px;
-  padding: 5px;
-  border-radius: 2px;
-  left: 4px;*/
 }
 
 input[type="submit"] {
@@ -119,12 +108,6 @@ input[type="submit"] {
   border: 1px solid black;
   padding: 10px 0px;
   background: #CCC;
-/*  background: #EEE;
-  padding: 3px;
-  border: 1px solid #CCC;
-  border-radius: 2px;
-  width: 80px;
-  color: #AAA;*/
 }
 
 input[type="submit"]:hover {
@@ -162,6 +145,10 @@ td {
   left: -1px;
 }
 
+td#date {
+  width: 100px;
+}
+
 td.timeoff {
   color: red;
 }
@@ -176,25 +163,40 @@ p.error {
   color: white;
 }
 
-
-div.squares{
-  margin-left: 20px;
-}
-
-div.square {
-  height: 13px;
-  width: 10px;
-  background: grey;
-  display: inline-block;
-  opacity:0.3;
-}
-
 .updated {
   font-family: "Economica";
   width: 300px;
   padding: 20px;
   margin: auto;  
 }
+
+div.squares{
+  margin-left: 20px;
+}
+
+div.square {
+  cursor: crosshair;
+  padding-left: 2px ;
+  height: 15px;
+  width: 11px;
+  background: grey;
+  display: inline-block;
+  opacity:0.3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OLD==OLD */
 
 /*div.square:hover {
   color: blue;
