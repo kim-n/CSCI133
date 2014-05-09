@@ -74,7 +74,7 @@ form {
   background: #EEE;
   padding: 20px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .user-info, .name {
@@ -166,11 +166,12 @@ p.error {
   font-family: "Economica";
   width: 300px;
   padding: 20px;
+  padding-left: 100px;
   margin: auto;  
 }
 
 div.squares{
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 div.square {
@@ -182,13 +183,6 @@ div.square {
   display: inline-block;
   opacity:0.3;
 }
-
-
-
-
-
-
-
 
 
 
