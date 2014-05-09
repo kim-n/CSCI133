@@ -184,7 +184,10 @@ div.square {
   opacity:0.3;
 }
 
-
+.final-date{
+  color: red;
+  text-align: center;
+}
 
 
 
