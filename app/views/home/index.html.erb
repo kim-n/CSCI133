@@ -1,32 +1,32 @@
 <div class="main">
 
 <div class="squares">
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
+  <div class="square" data-index="0"></div>
+  <div class="square" data-index="1"></div>
+  <div class="square" data-index="2"></div>
+  <div class="square" data-index="3"></div>
+  <div class="square" data-index="4"></div>
 
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
+  <div class="square" data-index="5"></div>
+  <div class="square" data-index="6"></div>
+  <div class="square" data-index="7"></div>
+  <div class="square" data-index="8"></div>
+  <div class="square" data-index="9"></div>
 
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
+  <div class="square" data-index="10"></div>
+  <div class="square" data-index="11"></div>
+  <div class="square" data-index="12"></div>
+  <div class="square" data-index="13"></div>
+  <div class="square" data-index="14"></div>
 
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
-  <div class="square"></div>
+  <div class="square" data-index="15"></div>
+  <div class="square" data-index="16"></div>
+  <div class="square" data-index="17"></div>
+  <div class="square" data-index="18"></div>
+  <div class="square" data-index="19"></div>
 
-  <div class="square"></div>
-  <div class="square"></div>
+  <div class="square" data-index="20"></div>
+  <div class="square" data-index="21"></div>
 </div>
 
 <h1><a href="https://bbhosted.cuny.edu/webapps/portal/frameset.jsp?tab_tab_group_id=_50_1&url=%2Fwebapps%2Fblackboard%2Fexecute%2Flauncher%3Ftype%3DCourse%26id%3D_947900_1%26url%3D">CSCI 133 | Programming for Everyone</a></h1>
@@ -107,7 +107,7 @@
    
    var things = [];
    things =  <%= raw @dates.to_json %>;
-   console.log(things);
+
    var num = 1;
    things.forEach(function(entry) {
      if (entry[1] == ''){
@@ -119,20 +119,25 @@
      else {
        $('.square:nth-child(' + num + ')').css('background-color', 'orange');
      }
-     $('.square:nth-child(' + num + ')').text(entry[0]);
      num++;
    })
    
-   $('.square').css('color', 'transparent');
+   $('.square').css('color', 'white');
    $(".square").hover(function(){
-     
-     if($(this).text() != '') {
-       $(this).css('width', '63px');
+     var index = $(this).attr("data-index")
+     console.log();
+     if( index < things.length){
+       $(this).css('width', '65px');
+       $(this).css('height', '17px');
+       
+       $(this).text(things[index][0]); 
      }
-     $(this).css('color', 'white');
-     },function(){
-       $(this).css('width', '10px');
-     $(this).css('color', 'transparent');
+
+   },function(){
+       $(this).css('width', '11px');
+       $(this).css('height', '15px');
+       
+       $(this).text("");
    }); 
  })
 </script> 
